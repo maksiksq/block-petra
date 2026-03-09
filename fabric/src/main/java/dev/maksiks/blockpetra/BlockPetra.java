@@ -1,13 +1,14 @@
 package dev.maksiks.blockpetra;
 
-import com.google.common.base.Supplier;
 import dev.maksiks.blockpetra.block.ModBlocks;
 import dev.maksiks.blockpetra.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
+
+import static dev.maksiks.blockpetra.ModFabricCreativeTab.CUSTOM_CREATIVE_TAB;
+import static dev.maksiks.blockpetra.ModFabricCreativeTab.CUSTOM_CREATIVE_TAB_KEY;
 
 public class BlockPetra implements ModInitializer {
 
@@ -24,5 +25,7 @@ public class BlockPetra implements ModInitializer {
 
         ModBlocks.BLOCK_MAP.forEach((path, blockSupplier) -> Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, path), blockSupplier.get()));
         ModItems.ITEM_MAP.forEach((path, itemSupplier) -> Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, path), itemSupplier.get()));
+
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_CREATIVE_TAB_KEY, CUSTOM_CREATIVE_TAB);
     }
 }

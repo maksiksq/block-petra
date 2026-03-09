@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "blockpetra:block/block_petra_poroshenka"
+  }
+}

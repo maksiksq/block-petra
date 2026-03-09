@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kvass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "blockpetra:kvass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "blockpetra:block_petra_poroshenka"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_kvass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "blockpetra:block_petra_poroshenka"
+    ]
+  }
+}
